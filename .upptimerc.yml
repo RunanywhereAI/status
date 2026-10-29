@@ -1,31 +1,37 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Public status page for RunAnywhere / Wally: https://status.runanywhere.ai
+# Plan and reasoning: RunanywhereAI/InferenceInfra#930.
+owner: RunanywhereAI
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # Unauthenticated /v1/models must answer 401. That proves the edge, the
+  # gateway and key auth are alive end to end; a 5xx means down. Don't change
+  # it to expect 200: the 401 is the proof.
+  - name: Inference API
+    url: https://inference.runanywhere.ai/v1/models
+    expectedStatusCodes:
+      - 401
+    maxResponseTime: 5000
+  - name: Control plane
+    url: https://inference.runanywhere.ai/api/readyz
+    maxResponseTime: 5000
+  - name: Console
+    url: https://console.runanywhere.ai/
+    maxResponseTime: 5000
+  - name: Website
+    url: https://runanywhere.ai/
+    maxResponseTime: 5000
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.runanywhere.ai
+  name: RunAnywhere Status
+  introTitle: "**RunAnywhere** service status"
+  introMessage: Live status of the Wally inference API, control plane and console. Incidents are posted here as they happen.
+  logoUrl: https://runanywhere.ai/favicon.ico
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Wally
+      href: https://www.runwally.com
+    - title: Support
+      href: mailto:support@runanywhere.ai

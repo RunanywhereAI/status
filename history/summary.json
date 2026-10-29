@@ -5,17 +5,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/inference.runanywhere.ai.ico",
     "slug": "inference-api",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "8.36%",
+    "uptimeDay": "8.36%",
+    "uptimeWeek": "8.36%",
+    "uptimeMonth": "8.36%",
+    "uptimeYear": "8.36%",
     "time": 183,
     "timeDay": 183,
     "timeWeek": 183,
     "timeMonth": 183,
     "timeYear": 183,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-10-29": 2
+    }
   },
   {
     "name": "Control plane",

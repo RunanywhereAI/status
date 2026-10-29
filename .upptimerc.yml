@@ -4,13 +4,21 @@ owner: RunanywhereAI
 repo: status
 
 sites:
-  # Unauthenticated /v1/models must answer 401. That proves the edge, the
-  # gateway and key auth are alive end to end; a 5xx means down. Don't change
-  # it to expect 200: the 401 is the proof.
+  # /v1/models is public now (answers 200 without a key), so the API row
+  # probes a keyless chat completion instead: 401 proves the edge, the
+  # gateway and key auth are alive end to end, and costs nothing. A 5xx is
+  # down. Don't change it to expect 200: the 401 is the proof.
   - name: Inference API
-    url: https://inference.runanywhere.ai/v1/models
+    url: https://inference.runanywhere.ai/v1/chat/completions
+    method: POST
+    body: '{"model":"glm-5.3-flash","messages":[{"role":"user","content":"ping"}]}'
+    headers:
+      - "Content-Type: application/json"
     expectedStatusCodes:
       - 401
+    maxResponseTime: 5000
+  - name: Model catalog
+    url: https://inference.runanywhere.ai/v1/models
     maxResponseTime: 5000
   - name: Control plane
     url: https://inference.runanywhere.ai/api/readyz

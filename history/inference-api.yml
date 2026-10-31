@@ -1,7 +1,7 @@
 url: https://inference.runanywhere.ai/v1/chat/completions
 status: up
 code: 401
-responseTime: 200
-lastUpdated: 2026-10-30T23:10:05.071Z
+responseTime: 218
+lastUpdated: 2026-10-31T23:09:09.612Z
 startTime: 2026-10-29T01:21:36.975Z
 generator: Upptime <https://github.com/upptime/upptime>

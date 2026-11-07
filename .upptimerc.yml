@@ -35,7 +35,62 @@ status-website:
   name: RunAnywhere Status
   introTitle: "**RunAnywhere** service status"
   introMessage: Live status of the Wally inference API, control plane and console. Incidents are posted here as they happen.
-  logoUrl: https://runanywhere.ai/favicon.ico
+  theme: dark
+  logoUrl: https://runanywhere.ai/brand/runanywhere-icon.svg
+  faviconSvg: https://runanywhere.ai/brand/runanywhere-icon.svg
+  favicon: https://runanywhere.ai/brand/runanywhere-icon.svg
+  # RunAnywhere brand: tokens copied from runanywhere.ai (night #161515, card #2b2a2a,
+  # mist #f5f2f2, orange #fd7014, gradient #ff6900 -> #fb2c36; Fraunces / IBM Plex).
+  links:
+    - rel: preconnect
+      href: https://fonts.gstatic.com
+    - rel: stylesheet
+      href: https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap
+  metaTags:
+    - name: theme-color
+      content: "#161515"
+  css: |
+    :root:root{--ra-night:#161515;--ra-card:#2b2a2a;--ra-mist:#f5f2f2;--ra-orange:#fd7014;--ra-from:#ff6900;--ra-to:#fb2c36;--ra-ok:#3ecf8e;--ra-bad:#f2555a;--ra-blue:#8ea5e3;--ra-line:rgba(255,255,255,.1);
+    --body-background-color:#161515;--body-text-color:#f5f2f2;--card-background-color:#2b2a2a;--nav-background-color:rgba(22,21,21,.85);--nav-border-bottom-color:rgba(255,255,255,.1);--nav-current-border-bottom-color:#fd7014;--card-border-color:rgba(255,255,255,.1);--down-border-left-color:#f2555a;--down-background-color:rgba(242,85,90,.12);--degraded-border-left-color:#fd7014;--up-border-left-color:#3ecf8e;--tag-color:#161515;--tag-up-background-color:#3ecf8e;--tag-down-background-color:#f2555a;--tag-degraded-background-color:#fd7014;--change-background-color:#fd7014;--error-button-border-color:#fd7014;--error-button-background-color:transparent;--error-button-color:#f5f2f2;--submit-button-border-color:transparent;--submit-button-background-color:#fd7014;--submit-button-color:#161515;--graph-opacity:1;--graph-filter:none;color-scheme:dark}
+    html,body{background:#161515!important;color:#f5f2f2!important}
+    body{font-family:"IBM Plex Sans","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+    h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;letter-spacing:-.01em}
+    h1{font-size:2.6em;font-weight:500;margin-top:.5em}
+    h1 strong{background:linear-gradient(90deg,#ff6900,#fb2c36);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+    h2{font-size:1.5em;font-weight:500}
+    h3{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.8em;text-transform:uppercase;letter-spacing:.08em;opacity:.6}
+    h4{font-family:"IBM Plex Sans",sans-serif;font-weight:600}
+    p.lead,.lead{color:rgba(245,242,242,.7)}
+    a{color:inherit}
+    nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-weight:400!important}
+    nav .logo img{height:1.9rem!important;border-radius:6px}
+    nav .logo div{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.15em}
+    nav ul a{color:rgba(245,242,242,.7);transition:color .15s}
+    nav ul a:hover,nav ul a[aria-current]{color:#f5f2f2}
+    article{border-radius:16px!important;border:1px solid rgba(255,255,255,.1)!important;padding:1.1rem 1.4rem!important;transition:border-color .15s,transform .15s}
+    article.up,article.down,article.degraded{border-left-width:3px!important}
+    article.link:hover{border-color:rgba(253,112,20,.5)!important}
+    article + article{margin-top:.75rem!important}
+    .data{font-family:"IBM Plex Mono",ui-monospace,monospace;color:#f5f2f2}
+    .tag{border-radius:9999px!important;font-family:"IBM Plex Mono",monospace;font-weight:600;padding:.25rem .65rem!important}
+    input[type=radio]+label{border-radius:9999px;font-family:"IBM Plex Mono",monospace}
+    input[type=radio]:checked+label{background:#fd7014!important;color:#161515!important;border-color:#fd7014!important}
+    code{font-family:"IBM Plex Mono",monospace;background:#2b2a2a;color:#8ea5e3;border-radius:6px;padding:.1em .35em}
+    a.error-button,.submit-button,button{border-radius:9999px!important}
+    footer{font-family:"IBM Plex Mono",monospace;font-size:.8em;opacity:.55!important}
+    footer a{color:#fd7014}
+    ::selection{background:#fd7014;color:#161515}
+    input[type=radio]+label{padding:.2rem .7rem!important;display:inline-block;min-width:2.2rem;text-align:center}
+    .data{font-family:inherit!important;font-weight:600}
+    nav ul a{color:rgba(245,242,242,.8)}
+    p.lead,.lead{color:rgba(245,242,242,.78)}
+    nav{background:#161515!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+    article.down a,article.link a{color:#fd7014}
+    article.link h4 a,article.graph h4 a{color:#f5f2f2}
+    footer{opacity:.8!important}
+    footer a{color:#fd7014!important}
+    article.graph{background-image:none!important;position:relative;overflow:hidden;isolation:isolate}
+    article.graph::before{content:"";position:absolute;top:14px;bottom:14px;right:18px;width:45%;background:linear-gradient(180deg,#ff6900,rgba(251,44,54,.35));-webkit-mask:var(--background) right center/contain no-repeat;mask:var(--background) right center/contain no-repeat;opacity:.9;pointer-events:none;z-index:-1}
   navbar:
     - title: Status
       href: /

@@ -4,19 +4,19 @@
     "url": "https://inference.runanywhere.ai/v1/chat/completions",
     "icon": "https://icons.duckduckgo.com/ip3/inference.runanywhere.ai.ico",
     "slug": "inference-api",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.98%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 231,
-    "timeDay": 158,
-    "timeWeek": 235,
-    "timeMonth": 231,
-    "timeYear": 231,
+    "status": "up",
+    "uptime": "99.80%",
+    "uptimeDay": "98.13%",
+    "uptimeWeek": "99.73%",
+    "uptimeMonth": "99.80%",
+    "uptimeYear": "99.80%",
+    "time": 228,
+    "timeDay": 174,
+    "timeWeek": 229,
+    "timeMonth": 228,
+    "timeYear": 228,
     "dailyMinutesDown": {
-      "2026-11-07": 0
+      "2026-11-07": 27
     }
   },
   {
@@ -24,19 +24,19 @@
     "url": "https://inference.runanywhere.ai/v1/models",
     "icon": "https://icons.duckduckgo.com/ip3/inference.runanywhere.ai.ico",
     "slug": "model-catalog",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "up",
+    "uptime": "99.80%",
+    "uptimeDay": "98.14%",
+    "uptimeWeek": "99.73%",
+    "uptimeMonth": "99.80%",
+    "uptimeYear": "99.80%",
     "time": 177,
-    "timeDay": 152,
-    "timeWeek": 186,
+    "timeDay": 166,
+    "timeWeek": 185,
     "timeMonth": 177,
     "timeYear": 177,
     "dailyMinutesDown": {
-      "2026-11-07": 0
+      "2026-11-07": 27
     }
   },
   {

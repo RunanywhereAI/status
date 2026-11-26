@@ -24,19 +24,20 @@
     "url": "https://inference.runanywhere.ai/v1/models",
     "icon": "https://icons.duckduckgo.com/ip3/inference.runanywhere.ai.ico",
     "slug": "model-catalog",
-    "status": "up",
+    "status": "down",
     "uptime": "99.93%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.93%",
     "uptimeYear": "99.93%",
-    "time": 158,
-    "timeDay": 123,
-    "timeWeek": 130,
-    "timeMonth": 158,
-    "timeYear": 158,
+    "time": 160,
+    "timeDay": 162,
+    "timeWeek": 139,
+    "timeMonth": 160,
+    "timeYear": 160,
     "dailyMinutesDown": {
-      "2026-11-07": 27
+      "2026-11-07": 27,
+      "2026-11-26": 0
     }
   },
   {

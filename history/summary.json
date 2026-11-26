@@ -4,20 +4,20 @@
     "url": "https://inference.runanywhere.ai/v1/chat/completions",
     "icon": "https://icons.duckduckgo.com/ip3/inference.runanywhere.ai.ico",
     "slug": "inference-api",
-    "status": "degraded",
-    "uptime": "99.93%",
-    "uptimeDay": "99.97%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "99.93%",
-    "uptimeYear": "99.93%",
-    "time": 652,
-    "timeDay": 7658,
-    "timeWeek": 2034,
-    "timeMonth": 652,
-    "timeYear": 652,
+    "status": "up",
+    "uptime": "99.91%",
+    "uptimeDay": "99.43%",
+    "uptimeWeek": "99.92%",
+    "uptimeMonth": "99.91%",
+    "uptimeYear": "99.91%",
+    "time": 776,
+    "timeDay": 6722,
+    "timeWeek": 2346,
+    "timeMonth": 776,
+    "timeYear": 776,
     "dailyMinutesDown": {
       "2026-11-07": 27,
-      "2026-11-26": 0
+      "2026-11-26": 8
     }
   },
   {
